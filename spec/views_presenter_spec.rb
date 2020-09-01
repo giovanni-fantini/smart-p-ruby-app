@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe LogHandler::ViewsPresenter do
   describe '.call' do
     subject { described_class.call(views: views, mode: mode) }
@@ -6,7 +8,10 @@ RSpec.describe LogHandler::ViewsPresenter do
       let(:mode) { 'something' }
 
       it 'raises an UnacceptedModeError' do
-        expect{subject}.to raise_error(LogHandler::UnacceptedModeError, 'The specified mode is invalid - currently accepted modes [:total, :unique]')
+        expect { subject }.to raise_error(
+          LogHandler::UnacceptedModeError,
+          'The specified mode is invalid - currently accepted modes [:total, :unique]'
+        )
       end
     end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe LogHandler::ViewsCalculator do
   describe '.call' do
     subject { described_class.call(views: views, mode: mode) }
@@ -22,7 +24,10 @@ RSpec.describe LogHandler::ViewsCalculator do
       let(:mode) { 'something' }
 
       it 'raises an UnacceptedModeError' do
-        expect{subject}.to raise_error(LogHandler::UnacceptedModeError, 'The specified mode is invalid - currently accepted modes [:total, :unique]')
+        expect { subject }.to raise_error(
+          LogHandler::UnacceptedModeError,
+          'The specified mode is invalid - currently accepted modes [:total, :unique]'
+        )
       end
     end
 
@@ -37,7 +42,7 @@ RSpec.describe LogHandler::ViewsCalculator do
       end
 
       it 'calculates the total views per page' do
-        expect(subject).to eq (expected_result)
+        expect(subject).to eqexpected_result
       end
     end
 
@@ -52,7 +57,7 @@ RSpec.describe LogHandler::ViewsCalculator do
       end
 
       it 'calculates the total views per page' do
-        expect(subject).to eq (expected_result)
+        expect(subject).to eqexpected_result
       end
     end
   end

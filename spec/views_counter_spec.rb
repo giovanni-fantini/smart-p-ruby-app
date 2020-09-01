@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe LogHandler::ViewsCounter do
   describe '.call' do
     subject { described_class.call(row: row, result: result) }
@@ -5,7 +7,7 @@ RSpec.describe LogHandler::ViewsCounter do
     let(:row) do
       ['/home', '235.313.352.950']
     end
-    
+
     let(:result) do
       {
         '/help_page/1' => {
@@ -38,7 +40,7 @@ RSpec.describe LogHandler::ViewsCounter do
     end
 
     it 'aggregates the given page view by ip into the hash of previous views' do
-      expect(subject).to eq (expected_result)
+      expect(subject).to eqexpected_result
     end
   end
 end
