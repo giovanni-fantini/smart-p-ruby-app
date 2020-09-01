@@ -12,14 +12,14 @@ RSpec.describe LogHandler::Parser::Csv do
 
       let(:expected_output) do
         {
-          '/help_page/1' => '722.247.931.582',
+          '/help_page/1' => '126.318.035.038',
           '/contact' => '184.123.665.067',
           '/home' => '235.313.352.950'
         }
       end
 
       it 'aggregates the parsed values according to the logic of the given block' do
-        expect(subject).to eqexpected_output
+        expect(subject).to eq(expected_output)
       end
     end
 
@@ -32,13 +32,13 @@ RSpec.describe LogHandler::Parser::Csv do
           ['/contact', '184.123.665.067'],
           ['/home', '184.123.665.067'],
           ['/help_page/1', '929.398.951.889'],
-          ['/help_page/1', '722.247.931.582'],
+          ['/help_page/1', '126.318.035.038'],
           ['/home', '235.313.352.950']
         ]
       end
 
       it 'parses all the csv into an arrary of arrays' do
-        expect(subject).to eqexpected_output
+        expect(subject).to eq(expected_output)
       end
     end
   end

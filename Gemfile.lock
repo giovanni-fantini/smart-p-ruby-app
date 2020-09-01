@@ -5,15 +5,11 @@ GEM
     byebug (11.1.3)
     coderay (1.1.3)
     diff-lcs (1.4.4)
-    equatable (0.6.1)
+    docile (1.3.2)
     method_source (1.0.0)
-    necromancer (0.6.0)
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
-    pastel (0.7.4)
-      equatable (~> 0.6)
-      tty-color (~> 0.5)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -49,23 +45,13 @@ GEM
     rubocop-ast (0.3.0)
       parser (>= 2.7.1.4)
     ruby-progressbar (1.10.1)
-    strings (0.1.8)
-      strings-ansi (~> 0.1)
-      unicode-display_width (~> 1.5)
-      unicode_utils (~> 1.4)
-    strings-ansi (0.2.0)
+    simplecov (0.19.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+    simplecov-html (0.12.2)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    tty-color (0.5.2)
-    tty-screen (0.8.1)
-    tty-table (0.11.0)
-      equatable (~> 0.6)
-      necromancer (~> 0.5)
-      pastel (~> 0.7.2)
-      strings (~> 0.1.5)
-      tty-screen (~> 0.7)
     unicode-display_width (1.7.0)
-    unicode_utils (1.4.0)
 
 PLATFORMS
   ruby
@@ -75,8 +61,8 @@ DEPENDENCIES
   require_all
   rspec
   rubocop
+  simplecov
   terminal-table
-  tty-table
 
 BUNDLED WITH
    2.1.4

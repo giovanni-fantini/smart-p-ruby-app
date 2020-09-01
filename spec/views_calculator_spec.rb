@@ -42,7 +42,7 @@ RSpec.describe LogHandler::ViewsCalculator do
       end
 
       it 'calculates the total views per page' do
-        expect(subject).to eqexpected_result
+        expect(subject).to eq(expected_result)
       end
     end
 
@@ -57,7 +57,7 @@ RSpec.describe LogHandler::ViewsCalculator do
       end
 
       it 'calculates the total views per page' do
-        expect(subject).to eqexpected_result
+        expect(subject).to eq(expected_result)
       end
     end
   end

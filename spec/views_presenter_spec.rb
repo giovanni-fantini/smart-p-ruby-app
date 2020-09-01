@@ -4,6 +4,14 @@ RSpec.describe LogHandler::ViewsPresenter do
   describe '.call' do
     subject { described_class.call(views: views, mode: mode) }
 
+    let(:views) do
+      [
+        ['/help_page/1', 3],
+        ['/contact', 1],
+        ['/home', 2]
+      ]
+    end
+
     context 'when an unrecognized mode is given' do
       let(:mode) { 'something' }
 
@@ -17,13 +25,6 @@ RSpec.describe LogHandler::ViewsPresenter do
 
     context 'when the mode is :total' do
       let(:mode) { :total }
-      let(:views) do
-        [
-          ['/help_page/1', 3],
-          ['/contact', 1],
-          ['/home', 2]
-        ]
-      end
       let(:expected_result) do
         %r{
           Report on total page views

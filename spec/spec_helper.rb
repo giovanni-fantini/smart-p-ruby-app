@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'simplecov'
+SimpleCov.start
+
 require 'require_all'
 require 'pry-byebug'
 require 'terminal-table'

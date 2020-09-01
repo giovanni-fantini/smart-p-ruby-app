@@ -9,3 +9,5 @@ gem 'require_all'
 gem 'rspec'
 gem 'rubocop'
 gem 'terminal-table'
+
+gem 'simplecov', require: false, group: :test

@@ -15,7 +15,9 @@ module LogHandler
     end
 
     def call
-      raise UnacceptedModeError unless ACCEPTED_MODES.include?(mode)
+      unless ACCEPTED_MODES.include?(mode)
+        raise UnacceptedModeError, "The specified mode is invalid - currently accepted modes #{ACCEPTED_MODES}"
+      end
 
       table = generate_table
       puts table
