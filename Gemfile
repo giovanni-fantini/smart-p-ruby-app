@@ -8,6 +8,7 @@ gem 'pry-byebug'
 gem 'require_all'
 gem 'rspec'
 gem 'rubocop'
+gem 'term-ansicolor'
 gem 'terminal-table'
 
 gem 'simplecov', require: false, group: :test
